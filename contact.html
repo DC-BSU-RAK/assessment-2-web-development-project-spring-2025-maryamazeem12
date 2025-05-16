@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+   <!--PAGE TITLE-->
+  <title>Call of Duty Central</title>
+  <!--LINKING EXTERNAL STYLESHEET-->
+  <!--USING GOOGLE FONTS AND LINKING THEM-->
+  <link rel="stylesheet" href="style.css"/>
+  <link rel="preconnect" href="https://fonts.googleapis.com"/>
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
+  <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Anton&family=Roboto&display=swap" rel="stylesheet"/>
+  <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'/>
+  <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet"/>
+</head> 
+<body>
+<!-- AUDIO ELEMENT IN HTML -->
+<audio id="clickSound" src="audios/audio2.mp3" preload="auto"></audio>
+  <!--MAIN HEADER-->
+  <header class="main-header" id="mainHeader">
+    <div class="header-content" data-aos="fade-down">
+       <!--MY WEBSITE TITLE-->
+      <h1 class="main-title">CALL OF DUTY</h1>
+      <!--NAVIGATION BAR-->
+      <nav class="main-nav">
+        <a href="index.html">HOME</a>
+        <a href="about.html">ABOUT</a>
+        <a href="games.html">GAMES</a>
+        <a href="reviews.html">REVIEWS</a>
+        <a href="contact.html">CONTACT</a>
+      </nav>
+    </div>
+  </header>
+<!--HERO SECTION AT THE TOP OF THE CONTACT PAGE-->
+  <section class="contact-hero" data-aos="zoom-in">
+    <div class="overlay">
+      <!--MAIN HEADING-->
+      <h2>Lock and Load Your Message</h2>
+      <!--INTRO LINE-->
+      <p>Whether you're a squadmate or a lone wolf, reach out to us.</p>
+    </div>
+  </section>
+<!--MAIN CONTACT SECTION CONTAINING THE FORM AND INFO-->
+  <section class="contact-container">
+    <!--CONTACT FORM STARTS HERE-->
+    <form class="contact-form" data-aos="fade-right" data-aos-delay="300">
+      <!--FORM TITLE WITH ICON-->
+      <h3><i class='bx bxs-message-dots'></i> Send a Message</h3>
+     
+      <!--NAME INPUT-->
+      <label for="name">Name</label>
+      <input type="text" id="name" placeholder="Your Codename" required>
+
+      <!--EMAIL INPUT-->
+      <label for="email">Email</label>
+      <input type="email" id="email" placeholder="your Email" required>
+
+      <!--SUBJECT INPUT-->
+      <label for="subject">Subject</label>
+      <input type="text" id="subject" placeholder="Brief your mission" required>
+
+      <!--MESSAGE BOX-->
+      <label for="message">Message</label>
+      <textarea id="message" rows="5" placeholder="What’s your objective?" required></textarea>
+
+      <!--SUBMIT BUTTON WITH SEND ICON-->
+      <button type="submit" class="send-btn"><i class='bx bxs-send'></i> Send</button>
+    </form>
+       <!--LOCATION INFO WITH ICON-->
+    <div class="contact-info" data-aos="fade-left" data-aos-delay="400">
+      <h3><i class='bx bxs-map'></i> HQ Location</h3>
+      <p>Call of Duty Command Center<br>London, UK</p>
+        <!--EMAIL INFO WITH ICON-->
+      <h3><i class='bx bxs-envelope'></i> Email Support</h3>
+      <p>support@codcentral.com</p>
+
+      <!--PHONE NUMBER WITH ICON-->
+      <h3><i class='bx bxs-phone-call'></i> Comms</h3>
+      <p>+44 123 456 7890</p>
+    </div>
+  </section>
+<!--FOOTER SECTION-->
+  <footer class="cod-footer" data-aos="fade-up" data-aos-delay="200">
+    <!--FOOTER LOGOS FOR ACTIVISION AND INFINITY WARD-->
+    <div class="footer-logos">
+      <a href="https://www.activision.com/" target="_blank">
+        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRMQkWxsf6tlsycBZKvAy54-7NPilemDJ-LoA&s" alt="Activision Logo" class="studio-logo">
+      </a>
+      <a href="https://www.infinityward.com/" target="_blank">
+        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQn3OodW-CfiRSlZ-8idoI3_y5dvKNvNsSu8A&s" alt="Infinity Ward Logo" class="studio-logo">
+      </a>
+    </div>
+<!--FOOTER RATING SECTION-->
+    <div class="footer-rating">
+      <a href="https://www.esrb.org/" target="_blank">
+        <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/f/f9/ESRB_Mature_17%2B.svg/734px-ESRB_Mature_17%2B.svg.png" alt="ESRB Rating Logo" class="rating-logo">
+      </a>
+    </div>
+<!--FOOTER LINKS-->
+    <div class="footer-links">
+      <a href="https://www.callofduty.com/" target="_blank">CallOfDuty.com</a>
+      <a href="https://shop.callofduty.com/" target="_blank">COD Store</a>
+      <a href="https://www.activision.com/support" target="_blank">Support</a>
+    </div>
+<!--FOOTER LEGAL LINKS-->
+    <div class="footer-legal">
+      <a href="https://www.activision.com/legal/privacy-policy" target="_blank">Privacy Policy</a>
+      <a href="https://www.activision.com/legal/cookie-policy" target="_blank">Cookies</a>
+      <a href="https://www.activision.com/legal/terms-of-use" target="_blank">Terms</a>
+      <a href="https://www.activision.com/legal/advertising-partners" target="_blank">Ad Partners</a>
+    </div>
+<!--FOOTERCREDIT INFORMATION-->
+    <p class="footer-credit">
+      <span class="footer-year">© 2025</span>
+      <span class="footer-title"><strong>Call of Duty</strong></span>
+      <span class="footer-divider">|</span>
+      <span class="footer-created">Designed & Developed by</span>
+      <span class="credit-highlight">Maryam</span>
+    </p>
+  </footer>
+<!--LOAD THE AOS LIBRARY FROM A CDN-->
+  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+  <script>
+    //INITIALIZE AOS
+    AOS.init({
+      once: true,   //ANIMATIONS HAPPENS ONLY ONCE WHEN THE ELEMENT FIRST APPEARS
+      duration: 1200, //ANIMATION DURATION IS 1200 milliseconds
+    });
+  </script>
+  <script>
+    //GET THE AUDIO ELEMENT BY ITS ID
+    const clickSound = document.getElementById('clickSound');
+    //FUNCTION TO PLAY THE CLICK SOUND
+    function playClickSound() {
+      clickSound.currentTime = 0; //RESET THE SOUND TO THE BEGINNING
+      clickSound.play(); //PLAY THE SOUND
+    }
+  
+    // HANDLE TOP NAVIGATION LINKS
+    //THIS IS FOR LINKS INSIDE THE MAIN NAVIGATION BAR
+    document.querySelectorAll('.main-nav a').forEach(link => {
+      link.addEventListener('click', function(e) {
+        e.preventDefault(); // STOP THE BROWSER FROM NAVIGATING INSTANTLY
+        playClickSound(); //PLAY THE CLICK SOUND
+  
+        const href = this.getAttribute('href'); //GET THE TARGET URL
+        //DELAY NAVIGATING TO THE SOUND PLAYS BEFORE REDIRECT
+        setTimeout(() => {
+          window.location.href = href; // NAVIGATE TO THE LINK
+        }, 300); // 300ms DELAY (CAN BE ADJUSTED)
+      });
+    });
+  
+    // HANDLE ALL OTHER LINKS (LIKE FOOTER LINKS) AND BUTTONS (WITHOUT DELAY)
+    document.querySelectorAll('a:not(.main-nav a), button').forEach(element => {
+      element.addEventListener('click', () => {
+        playClickSound(); //JUST PLAY THE SOUND NORMALLY ON CLICK
+      });
+    });
+  </script>
+</body>
+</html>

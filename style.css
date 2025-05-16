@@ -1,0 +1,2339 @@
+/* ================= Home Section CSS ============= */
+body{
+  margin: 0; /* Removes default margin */
+  padding: 0; /* Removes default padding */
+  background-color: #000000; /* Sets background to black */
+  scroll-behavior: smooth; /* Enables smooth scrolling on anchor links */
+}
+
+.container{
+  font-family: Arial, Helvetica, sans-serif; /* Sets fallback font stack */
+  color: white; /* Default text color */
+  display: flex; /* Enables Flexbox layout */
+  flex-direction: column; /* Aligns children vertically */
+  align-items: center; /* Centers children horizontally */
+  position: relative; /* Required for absolutely positioned children */
+}
+
+/* Header Styling */
+.main-header {
+  background: #111; /* Dark background */
+  text-align: center; /* Center aligns text */
+  padding: 1.5rem 1rem; /* Adds vertical and horizontal padding */
+  position: fixed; /* Sticks header to top of page */
+  top: 0; /* Top offset */
+  width: 100%; /* Full width */
+  z-index: 1000; /* Ensures it's above other elements */
+  transition: all 0.4s ease-in-out; /* Smooth transition for styling changes */
+}
+
+.header-content {
+  max-width: 1000px; /* Limits header width */
+  margin: 0 auto; /* Centers the content */
+}
+
+.warzone-section {
+  position: absolute; /* Positions it over the video */
+  top: 28%; /* Vertically positions the section */
+  left: 5%; /* Moves it slightly from the left */
+  z-index: 2; /* Above background video */
+  color: white; /* Text color */
+  max-width: 400px; /* Restricts width for readability */
+}
+
+.warzone-tagline {
+  font-size: 2rem; /* Large font */
+  font-weight: 800; /* Bold text */
+  text-transform: uppercase; /* Uppercase letters */
+  margin-top: 1rem; /* Spacing above */
+  margin-bottom: 1rem; /* Spacing below */
+  color: #fff; /* White text */
+  text-align: center; /* Centered text */
+}
+
+.warzone-section h1 {
+  font-size: 60px; /* Very large heading */
+  margin: 0; /* Removes default margin */
+  font-family: 'Orbitron', sans-serif; /* Futuristic font */
+  color: #ffe600; /* Bright yellow color */
+  text-shadow: 0 0 6px #000; /* Adds glow effect for contrast */
+}
+
+.warzone-section p {
+  font-size: 16px; /* Standard paragraph size */
+  margin: 30px 0; /* Vertical spacing */
+  color: #ddd; /* Light grey for softer readability */
+}
+
+.warzone-section button {
+  background-color: transparent; /* No background */
+  color: #ffffff; /* White text */
+  font-weight: 900; /* Bold text */
+  font-size: 20px; /* Larger text */
+  padding: 16px 40px; /* Button padding */
+  text-transform: uppercase; /* All caps */
+  border: none; /* No border */
+  border-radius: 35px; /* Rounded button */
+  cursor: pointer; /* Pointer cursor */
+  box-shadow: 0 0 20px #ffd700aa; /* Glowing box shadow */
+  transition: all 0.3s ease; /* Smooth hover effect */
+}
+
+.warzone-section button:hover {
+  background-color: #ffcc00; /* Yellow background on hover */
+  color: #000; /* Black text */
+  box-shadow: 0 0 30px #ffd700cc, 0 0 50px #ffd700aa; /* Stronger glow */
+  transform: scale(1.08); /* Button enlarges slightly */
+}
+
+.main-title {
+  font-family: 'Orbitron', sans-serif; /* Modern/futuristic font */
+  font-size: 2.5rem; /* Large text */
+  color: #ffe600; /* Bright yellow */
+  text-shadow:
+    0 0 2px #ffe600,
+    0 0 6px #ffcc00; /* Glowing yellow shadows */
+  letter-spacing: 2px; /* Space between letters */
+  text-transform: uppercase; /* All caps */
+  margin-top: 30px; /* Pushes title down */
+}
+
+.code-universe {
+  position: absolute;
+  bottom: 80px; /* Distance from bottom */
+  right: 40px; /* Padding from right */
+  font-size: 50px; /* Large text */
+  font-weight: 100; /* Light weight (possibly meant to be bold?) */
+  font-family: 'Orbitron', sans-serif; /* Futuristic font */
+  color: #ffe600; /* Yellow */
+  text-shadow: 0 0 8px #000; /* Dark glow for readability */
+}
+
+/* Utility classes */
+.autoBlur {
+  backdrop-filter: blur(5px); /* Applies blur effect to background */
+}
+.autoDisplay {
+  display: flex;
+  justify-content: center;
+  align-items: center; /* Centers child items */
+}
+.autoTakeFull {
+  width: 100%;
+  height: 100%; /* Fills full container */
+}
+
+.main-nav {
+  display: flex; /* Flexbox for nav */
+  justify-content: center;
+  align-items: center;
+  gap: 1rem; /* Spacing between nav items */
+  margin-top: 30px; /* Space below header */
+  z-index: 10; /* Ensures it stays above background */
+  position: relative;
+}
+
+.main-nav a {
+  font-family: 'Orbitron', sans-serif;
+  font-size: 1.2rem;
+  color: #fff; /* White text */
+  text-decoration: none; /* No underline */
+  margin: 0 0.5rem; /* Space between links */
+  position: relative;
+  text-transform: uppercase;
+  transition: color 0.3s ease, text-shadow 0.3s ease; /* Smooth hover */
+}
+
+.main-nav a:hover,
+.main-nav a:focus,
+.main-nav a:active {
+  color: #ffe600; /* Yellow on hover */
+  text-shadow: 
+    -2px 0 4px #ffea00,
+    0 0 6px #ffcc00; /* Glowing hover effect */
+}
+
+.hero-section{
+  position: relative;
+  width: 100%;
+  height: 100vh; /* Full screen height */
+  overflow: hidden; /* Prevents scrollbars on overflow */
+}
+
+.hero-vid{
+  width:  100%;
+  height: 100%;
+  position: relative; /* Allows layering of children */
+}
+
+.hero-video{
+  width: 100%;
+  height: 100% ;
+  object-fit: cover; /* Video covers entire container */
+}
+
+.hero-info{
+  z-index: 1; /* Above video */
+  position: absolute;
+  top: 80px;
+  left: 50px; /* Position near top-left */
+}
+
+.hero-info h1{
+  font-size: 120px; /* Huge title */
+  font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+  font-weight:  900;
+  font-style: normal;
+  margin-top: 30px;
+  margin-bottom:  20px;
+}
+
+.hero-text {
+  font-size: 1.3rem;
+  font-weight: normal;
+  margin-top: 1rem;
+  margin-bottom: 1rem;
+  color: #bab9b9; /* Light gray text */
+  text-align: center;
+  margin: 20px 0; /* Vertical margin */
+  /* NOTE: Extra '/' at the end might be a typo */
+}
+
+.hero-info p{
+  color: white;
+  max-width:  210px; /* Restrict width of paragraph */
+}
+
+.hero-info button{
+  background-color:  #edff66; /* Bright yellow-green */
+  border: 2px solid  #edff66;
+  padding: 10px 40px;
+  border-radius:  20px;
+  cursor: pointer;
+  color: black;
+  transition: 0.3s; /* Smooth hover effect */
+}
+
+.hero-info button:hover{
+  background-color: transparent;
+  color: white;
+  box-shadow: 0 0 15px #edff66; /* Glow on hover */
+}
+
+.next-btn {
+  width: 150px;
+  height: 150px;
+  background-color: transparent;
+  position: absolute;
+  left: 47%; /* Centers horizontally */
+  bottom: 45%; /* Places around mid-screen */
+  border: 2px solid #ffe600;
+  border-radius: 50%; /* Makes it circular */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  font-size: 24px;
+  font-weight: bold;
+  cursor: pointer;
+  z-index: 100;
+  text-shadow: 0 0 10px #ffe600;
+  transition: all 0.3s ease-in-out;
+  animation: pulse 2s infinite; /* Infinite pulse animation */
+}
+
+.next-btn:hover {
+  background-color: #ffe600;
+  color: black;
+  text-shadow: 0 0 10px #ffe600;
+  box-shadow: 0 0 20px #ffe600;
+}
+
+/* Keyframes for pulsing effect */
+@keyframes pulse {
+  0%, 100% {
+      transform: scale(1);
+  }
+  50% {
+      transform: scale(1.1); /* Slightly expands */
+  }
+}
+
+.about-section{
+  width: 100%;
+  height: 100%;
+  margin-top: 200px; /* Space from top */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  color: white;
+}
+
+.image-box {
+  width: 360px;
+  height: 510px;
+  overflow: hidden; /* Hides overflow on image zoom */
+  display: flex;
+  align-items: center;
+  border-radius: 50px; /* Rounded corners */
+  transition: transform 0.3s ease; /* Smooth zoom */
+}
+
+.impact-scroll {
+  opacity: 0; /* Initially hidden */
+  transform: translateX(-100px); /* Slide from left */
+  transition: all 2s ease-out;
+  transition-delay: 0.3s; /* Delays animation start */
+  color: #ffffff;
+  text-align: center;
+  font-family: 'Impact', sans-serif;
+  font-size: 40px;
+  margin-top: 3rem;
+  text-shadow: 2px 2px 6px black;
+}
+
+.impact-scroll.show {
+  opacity: 1; /* Fully visible */
+  transform: translateX(0); /* Slide into position */
+}
+
+.image-box img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover; /* Fills box while preserving aspect ratio */
+  transition: transform 0.3s ease;
+}
+
+.image-box:hover img {
+  transform: scale(0.93); /* Slight zoom-out on hover */
+}
+
+.quote-container {
+  text-align: center;
+  margin-top: 40px;
+  font-family: 'Montserrat', sans-serif; /* Clean readable font */
+}
+
+.quote-container h4 {
+  font-size: 26px;
+  font-weight: 700;
+  color: #ffffff;
+  animation: fadeInUp 1s ease-out; /* Smooth entrance */
+}
+
+.quote-container h5 {
+  font-size: 16px;
+  color: #bbbbbb;
+  margin-top: 10px;
+  line-height: 1.6;
+  animation: fadeInUp 1.5s ease-out; /* Slower entrance */
+}
+
+/* Keyframes for fade-in and upward animation */
+@keyframes fadeInUp {
+  from {
+      opacity: 0;
+      transform: translateY(20px);
+  }
+  to {
+      opacity: 1;
+      transform: translateY(0);
+  }
+}
+
+  
+/* Styles the H1 in the about section with a bold, gradient-filled text */
+.about-section h1{
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif; /* Bold display font */
+    font-weight:  900; /* Extra bold */
+    font-size: 100px; /* Large heading */
+    max-width: 1150px; /* Restricts width */
+    text-align: center; /* Centers the text */
+    margin: 25px 0; /* Top and bottom margin */
+    text-transform: uppercase; /* Converts text to uppercase */
+    background: linear-gradient(to right, #ffd500, #f5d400, #000000, #ffd000 , #ffe600); /* Gradient effect */
+    background-size: 200%; /* Doubles the background size for animation effect */
+    background-clip: text;
+    -webkit-background-clip: text; /* Clips gradient to text for webkit browsers */
+    -webkit-text-fill-color:transparent ; /* Hides actual text color to reveal gradient */
+    animation: animate-gradient 2.5s linear infinite; /* Continuous horizontal gradient animation */
+}
+
+/* Keyframe animation for moving gradient */
+@keyframes animate-gradient{
+    to{
+        background-position: 200%; /* Moves background gradient to right */
+    }
+}
+
+/* Subheading with margin */
+.about-section h4{
+    margin-top:  50px;
+    margin-bottom: 0;
+}
+
+/* Styles the paragraph under H4 */
+.about-section h5{
+    margin-top: 5px;
+    color: gray;
+    max-width:  425px;
+    text-align: center;
+    line-height: 25px; /* Improves readability */
+}
+
+/* Wrapper for info cards and text */
+.info-section{
+    display: flex;
+    flex-direction: column; /* Stack children vertically */
+    position: relative;
+    width: 80%; /* Takes 80% of container width */
+    margin-top: 100px; /* Space from top */
+}
+
+/* Heading for info section with gradient style */
+.info-section h3 {
+    font-family: 'Impact', sans-serif;
+    font-size: 60px;
+    margin-bottom: 10px;
+    text-transform: uppercase;
+    background: linear-gradient(to right, #ffd500, #f5d400, #000000, #ffd000 , #ffe600); /* Gradient */
+    background-size: 200%;
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color:transparent ;
+    animation: animate-gradient 2.5s linear infinite;
+}
+
+/* Paragraph style under info heading */
+.info-section p {
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    font-size: 1.5rem;
+    color: #999292;
+    font-weight: normal;
+    margin-top: 5px;
+}
+
+/* Grid layout for info cards */
+.info-cards{
+    display: grid;
+    grid-template-columns: auto auto; /* Two columns */
+    gap: 20px;
+    width: 100%;
+    height: 100%;
+    margin-top: 30px;
+}
+
+/* Individual card style */
+.card{
+    position: relative;
+    width: auto;
+    height: 40vh;
+    overflow: hidden;
+    border: 1px solid gray;
+    border-radius: 20px;
+    transition: 0.5s; /* Smooth transition on hover */
+}
+
+/* Heading on each card */
+.card h1{
+    position: absolute;
+    margin: 0;
+    top: 10px;
+    left: 5%;
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    font-size:60px;
+    z-index: 1;
+    background: linear-gradient(to right, #ffd500, #f5d400, #000000, #ffd000 , #ffe600,#f0cf3b);
+    background-size: 200%;
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color:transparent ;
+    animation: animate-gradient 2.5s linear infinite;
+    max-width: 250px;
+}
+
+/* Video fills entire card */
+.card video{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+/* Button styling inside card */
+.card button {
+    position: absolute;
+    bottom: 5%;
+    left: 5%;
+    padding: 14px 35px;
+    font-size: 18px;
+    font-weight: bold;
+    background-color: transparent;
+    color: white;
+    border: 2px solid #ffd500;
+    border-radius: 30px;
+    box-shadow: 0 0 10px #ffd500;
+    cursor: pointer;
+    transition: 0.3s ease;
+}
+
+/* Hover effect on card button */
+.card button:hover {
+    background-color: #ffd500;
+    color: black;
+    box-shadow: 0 0 20px #ffd500;
+}
+
+/* Hover effect for the card itself */
+.card:hover {
+    box-shadow: 0 0 25px 8px #ffd500;
+    transform: scale(1.02);
+}
+
+/* Makes first card span both columns */
+.card:nth-child(1){
+    grid-column: span 2;
+}
+
+/* Makes second card span two rows */
+.card:nth-child(2){
+    grid-row: span 2;
+    height: 83vh;
+}
+
+/* Global resets and box-sizing */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Basic body styles */
+body {
+  font-family: 'Roboto', sans-serif;
+  color: white;
+  background-color: #000;
+}
+
+/* Horizontal scroll container for timeline */
+.horizontal-scroll {
+    display: flex;
+    overflow-x: auto;
+    scroll-snap-type: x mandatory;
+    position: relative;
+}
+
+/* Custom scrollbar for horizontal section */
+.horizontal-scroll::-webkit-scrollbar {
+    height: 8px;
+}
+.horizontal-scroll::-webkit-scrollbar-thumb {
+    background: #555;
+    border-radius: 4px;
+}
+
+/* Container for timeline heading and scroll hints */
+.timeline-container {
+    position: relative;
+}
+
+/* Stylized heading for timeline section */
+.cod-timeline-title {
+    text-align: center;
+    margin: 0 auto;
+    position: relative;
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    font-size: 4rem;
+    z-index: 1;
+    margin-top: 120px;
+    margin-bottom: 40px;
+    background: linear-gradient(to right, #ffd500, #f5d400, #000000, #ffd000 , #ffe600, #f0cf3b);
+    background-size: 200%;
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    animation: animate-gradient 2.5s linear infinite;
+    width: fit-content;
+    max-width: 90vw;
+    padding: 20px;
+}
+
+/* Scroll hint tooltip box under timeline */
+.scroll-hint-box {
+    margin-top: 20px;
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    background: rgba(0, 0, 0, 0.5);
+    padding: 10px 15px;
+    border-radius: 12px;
+    color: #ffe600;
+    font-family: 'Orbitron', sans-serif;
+    font-size: 0.95rem;
+    box-shadow: 0 0 10px #ffe60050;
+}
+
+/* Arrow animation inside scroll hint */
+.scroll-hint-box .arrow {
+    font-size: 1.2rem;
+    animation: arrow-pulse 1.2s infinite;
+}
+
+/* Keyframes for pulsing arrow animation */
+@keyframes arrow-pulse {
+    0% { transform: translateX(0); opacity: 0.6; }
+    50% { transform: translateX(6px); opacity: 1; }
+    100% { transform: translateX(0); opacity: 0.6; }
+}
+
+/* Each horizontal scroll section */
+.section {
+    flex: 0 0 100%;
+    scroll-snap-align: start;
+    min-height: 70vh;
+    background-size: cover;
+    background-position: center;
+    position: relative;
+    padding: 80px 50px;
+    box-sizing: border-box;
+}
+
+/* Paragraph inside overlay section */
+.section.overlay .content p {
+    font-family: Arial, sans-serif;
+    font-size: 1.2rem;
+    font-weight: normal;
+    line-height: 1.2;
+    margin-bottom: 20px;
+    color: white;
+}
+
+/* Gradient overlay over section background */
+.overlay::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(to bottom, rgba(0,0,0,0.5), rgba(0,0,0,0.85));
+    z-index: 0;
+}
+
+/* Wrapper for inner content in sections */
+.content {
+    position: relative;
+    max-width: 900px;
+    margin: auto;
+    z-index: 1;
+}
+
+/* Section heading */
+h2 {
+    font-family: 'Anton', sans-serif;
+    font-size: 3.2rem;
+    margin-top: 60px;
+}
+
+/* Animation for a pulsing red line */
+@keyframes pulse-line {
+    0%, 100% {
+        transform: scaleX(1);
+    }
+    50% {
+        transform: scaleX(1.5);
+    }
+}
+
+/* Animated red line under headings */
+.red-line {
+    width: 60px;
+    height: 5px;
+    background: #c0392b;
+    margin: 10px 0 20px 0;
+    transform-origin: left;
+    animation: pulse-line 2s infinite ease-in-out;
+}
+
+/* Footer styles */
+.cod-footer {
+    background: #000;
+    color: #fff;
+    padding: 40px 20px;
+    text-align: center;
+    font-family: 'Orbitron', sans-serif;
+    border-top: 2px solid #333;
+}
+
+/* Logo container inside footer */
+.footer-logos {
+    margin: 25px 0;
+    display: flex;
+    justify-content: center;
+    gap: 40px;
+    flex-wrap: wrap;
+}
+/* ========== LOGO STYLING ========== */
+
+/* Studio logo inside footer or header – smaller, adjusts brightness, scales on hover */
+.studio-logo {
+  height: 65px; /* Slightly smaller than previous 80px */
+  object-fit: contain;
+  transition: transform 0.3s ease-in-out;
+  filter: brightness(0.9);
+}
+
+.studio-logo:hover {
+  transform: scale(1.1); /* Slight zoom effect on hover */
+  filter: brightness(1.2); /* Becomes brighter on hover */
+}
+
+/* ========== RATING LOGO STYLING ========== */
+
+/* Styling for any rating logos shown in the footer – slightly scaled and brightened on hover */
+.footer-rating {
+  margin: 20px 0; /* Space around the rating section */
+}
+
+.rating-logo {
+  height: 95px; /* Slightly smaller than previous 110px */
+  object-fit: contain;
+  transition: transform 0.3s ease;
+  filter: brightness(0.9);
+}
+
+.rating-logo:hover {
+  transform: scale(1.05); /* Mild zoom effect */
+  filter: brightness(1.2); /* Brighter on hover */
+}
+
+/* ========== FOOTER LINKS STYLING ========== */
+
+/* Styling both footer links and legal links */
+.footer-links,
+.footer-legal {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 15px;
+  margin: 15px 0;
+}
+
+/* Styling anchor tags inside footer sections */
+.footer-links a,
+.footer-legal a {
+  color: #bbb;
+  text-decoration: none;
+  font-size: 0.95rem;
+  letter-spacing: 0.5px;
+  position: relative;
+  transition: color 0.3s ease;
+}
+
+/* Underline animation effect for footer links on hover */
+.footer-links a::after,
+.footer-legal a::after {
+  content: '';
+  position: absolute;
+  left: 0;
+  bottom: -2px;
+  width: 0%;
+  height: 1px;
+  background: #fff;
+  transition: width 0.3s ease;
+}
+
+.footer-links a:hover,
+.footer-legal a:hover {
+  color: #fff; /* Changes text color to white */
+}
+
+.footer-links a:hover::after,
+.footer-legal a:hover::after {
+  width: 100%; /* Expands underline from left to right */
+}
+
+/* ========== FOOTER TEXT CREDIT STYLING ========== */
+
+.footer-credit {
+  font-family: 'Orbitron', sans-serif;
+  margin-top: 30px;
+  font-size: small;
+  font-weight: lighter;
+  color: #aaa;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  gap: 6px;
+  letter-spacing: 0.5px;
+}
+
+/* Additional text pieces used in the footer credit line with consistent style */
+
+.footer-year {
+  font-size: large;
+  font-family: 'Orbitron', sans-serif;
+  color: #fff;
+}
+
+.footer-title {
+  font-size: large;
+  font-family: 'Orbitron', sans-serif;
+  color: #fff;
+  font-weight: bold;
+}
+
+.footer-divider {
+  font-size: large;
+  font-family: 'Orbitron', sans-serif;
+  color: #555;
+}
+
+.footer-created {
+  font-size: large;
+  font-family: 'Orbitron', sans-serif;
+  color: #aaa;
+}
+
+.credit-highlight {
+  font-size: 1.2rem;
+  color: #fff;
+  font-weight: lighter;
+  font-family: 'Orbitron', sans-serif;
+  text-shadow: 0 0 4px #999; /* Soft glowing effect */
+}
+
+/* ========== SCROLL-BASED ANIMATIONS ========== */
+
+/* Applies a blur-in-and-out animation based on scroll position using View Timeline */
+.autoBlur {
+    animation: autoBlurAnimation linear both;
+    animation-timeline: view();
+}
+
+/* Defines the blur-in-out effect as an element scrolls into and out of view */
+@keyframes autoBlurAnimation {
+    0% {
+        filter: blur(40px); /* Starts highly blurred */
+    }
+    40%, 60% {
+        filter: blur(0); /* Sharp in the middle of scroll */
+        transform: translate(0px);
+        opacity: 1;
+    }
+    100% {
+        filter: blur(40px); /* Blurred again while fading out */
+        transform: translate(-200px); /* Slight left shift */
+        opacity: 0;
+    }
+}
+
+/* Makes an element expand to full screen as it scrolls into view */
+.autoTakeFull {
+    animation: autoTakeFullAnimation both;
+    animation-timeline: view(70% 65%);
+}
+
+/* Full width + full height transition animation */
+@keyframes autoTakeFullAnimation {
+    to {
+        width: 100%;
+        height: 100vh;
+        border-radius: 0;
+        margin-bottom: 100px;
+    }
+}
+
+/* Slide-up + fade-in scroll animation for displaying elements */
+.autoDisplay {
+    animation: autoDisplayAnimation both;
+    animation-timeline: view(70% 5%);
+}
+
+@keyframes autoDisplayAnimation {
+    from {
+        opacity: 0;
+        transform: translateY(200px) scale(0.3s); /* Enters from below and shrinks */
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0) scale(1); /* Fully visible and in place */
+    }
+}
+
+/* ========== RESPONSIVE DESIGN FOR SMALL SCREENS ========== */
+
+@media screen and (max-width: 650px) {
+
+    /* Shrinks horizontal padding for header */
+    header {
+        padding: 0 10px;
+    }
+
+    /* Hides the left-side button in small view */
+    .head-left button {
+        display: none;
+    }
+
+    /* Shrinks navigation links */
+    .head-right a {
+        font-size: 12px;
+        padding: 0 5px;
+    }
+
+    /* Adjusts hero info text position */
+    .hero-info {
+        left: 5%;
+    }
+
+    /* Shrinks main title text in hero section */
+    .hero-section h1 {
+        font-size: 90px;
+    }
+
+    /* Adjusts next button position */
+    .next-btn {
+        left: 25%;
+        top: 40%;
+    }
+
+    /* Removes default margin in about section */
+    .about-section {
+        margin: 0;
+    }
+
+    /* Shrinks about section title */
+    .about-section h1 {
+        font-size: 50px;
+    }
+
+    /* Resizes image box container */
+    .image-box {
+        width: 300px;
+        height: 500px;
+    }
+
+    /* Centers and limits text width for subheadings in about section */
+    .about-section h4, .about-section h5 {
+        max-width: 350px;
+        text-align: center;
+    }
+
+    /* Adjusts positions and sizes of decorative/contact images */
+    .contact-section .img1 {
+        width: 150px;
+        height: 200px;
+        right: 0;
+        top: 20px;
+    }
+
+    .contact-section .img2 {
+        top: 30px;
+        left: -40px;
+        width: 180px;
+        height: 180px;
+    }
+
+    .contact-section .img3 {
+        left: -40px;
+        bottom: 0;
+        width: 150px;
+        height: 180px;
+    }
+
+    /* Shrinks contact title */
+    .contact-section h1 {
+        font-size: 60px;
+        max-width: 300px;
+    }
+
+    /* Hides paragraph text in footer for compactness */
+    .footer p {
+        display: none;
+    }
+
+    /* Adjusts list spacing in footer */
+    .footer ul {
+        margin-left: 70px;
+    }
+}
+
+
+
+
+
+/* ================= ABOUT Section CSS ============= */
+.about-intro, .characters-section, .weapons-section {
+  /* General section styling - centered white text on black background */
+  text-align: center;
+  color: white;
+  background-color: #000000;
+}
+
+.about-intro {
+  margin-top: 230px; /* Provides spacing from top of page; increased slightly for visual separation */
+  margin-bottom: 20px; /* Keeps small space before next section (characters) */
+}
+
+.characters-section {
+  padding: 10px 20px 40px; /* Reduced padding to keep content compact */
+  margin-bottom: 20px;     /* Creates spacing before weapons section */
+}
+
+.weapons-section {
+  padding: 20px 20px 60px; /* Gives bottom padding to prevent crowding with footer or next content */
+}
+
+.about-intro h2,
+.characters-section h2,
+.weapons-section h2 {
+  /* Consistent styling for all h2 titles across sections */
+  font-family: 'Anton', sans-serif;
+  font-size: 3rem;
+  color: #ffffff;
+  margin-bottom: 20px;
+  text-align: center;
+  animation: colorFade 2s ease-in-out infinite alternate; /* Smooth color transition for attention */
+}
+
+@keyframes colorFade {
+  /* Animation to fade between white and yellow */
+  0% {
+    color: #ffffff;
+  }
+  100% {
+    color: #ffe600;
+  }
+}
+
+.weapon-box {
+  /* Box style for each weapon - modern card look */
+  background-color: #222;
+  padding: 15px;
+  border-radius: 12px;
+  width: 230px; /* Slightly increased width to improve layout */
+  text-align: center;
+  box-shadow: 0 0 10px #000;
+  transition: transform 0.3s ease;
+}
+
+.weapon-box img {
+  /* Styling for weapon images inside the box */
+  width: 100%;
+  max-height: 120px; /* Ensures image stays proportionate */
+  object-fit: cover;
+  border-radius: 8px;
+  margin-bottom: 10px;
+}
+
+@keyframes fadeIn {
+  /* Fade-in animation from below */
+  from { opacity: 0; transform: translateY(40px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+.weapon-box, .character-box {
+  /* Apply fadeIn animation to both weapon and character boxes */
+  animation: fadeIn 0.6s ease forwards;
+}
+
+.about-intro p {
+  /* Paragraph styling for About section */
+  max-width: 800px;
+  margin: 0 auto;
+  font-size: 1.1rem;
+  line-height: 1.6;
+  color: #ddd;
+}
+
+.character-box {
+  /* Card-style container for characters */
+  background: linear-gradient(145deg, #000000, #000000);
+  padding: 25px;
+  border-radius: 16px;
+  width: 320px;
+  min-height: 480px;
+  text-align: center;
+  box-shadow: 0 0 15px rgba(255, 230, 0, 0.1);
+  position: relative;
+  overflow: hidden;
+  border: 2px solid rgba(255, 230, 0, 0.15);
+  transition: transform 0.5s ease, box-shadow 0.5s ease;
+  animation: fadeInUp 1s ease-in-out both; /* Additional animation */
+}
+
+.character-box:hover {
+  /* Hover effects for character card - scaling and highlight glow */
+  transform: scale(1.05);
+  box-shadow: 0 0 25px rgba(255, 230, 0, 0.5);
+  border-color: #ffe600;
+}
+
+.weapon-box:hover {
+  /* Interactive rotation effect on hover */
+  cursor: crosshair;
+  transform: rotateY(360deg);
+  border-color: #e6c200;
+  box-shadow:
+    0 0 8px #e6c200,
+    0 0 12px #e6c200;
+}
+
+.weapon-box:hover img {
+  /* Slight zoom and rotation of weapon image on hover */
+  transform: scale(1.05) rotate(-1deg);
+  transition: transform 0.3s ease;
+}
+
+.weapon-box.rare { border: 2px solid #3498db; }        /* Blue border for rare */
+.weapon-box.epic { border: 2px solid #9b59b6; }        /* Purple border for epic */
+.weapon-box.legendary {                                /* Glowing gold border for legendary */
+  border: 2px solid #f1c40f;
+  animation: glow 1s infinite alternate;
+}
+
+@keyframes glow {
+  /* Pulsing glow animation */
+  0% { box-shadow: 0 0 5px #f1c40f; }
+  100% { box-shadow: 0 0 15px #f1c40f; }
+}
+
+.tooltip {
+  /* Tooltip style for extra weapon info */
+  position: absolute;
+  background: #000;
+  color: #ffe600;
+  padding: 5px 10px;
+  border-radius: 4px;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+
+.weapon-box:hover .tooltip {
+  /* Show tooltip on hover */
+  opacity: 1;
+}
+
+.character-box img {
+  /* Character image styling */
+  width: 100%;
+  height: 220px;
+  object-fit: cover;
+  border-radius: 10px;
+  margin-bottom: 20px;
+  filter: brightness(1.1);
+}
+
+.character-box h3 {
+  /* Character name styling */
+  font-size: 1.8rem;
+  margin-bottom: 12px;
+  color: #ffe600;
+  font-family: 'Anton', sans-serif;
+  text-shadow: 1px 1px #000;
+}
+
+.character-box p {
+  /* Character description */
+  font-size: 1rem;
+  color: #ccc;
+  line-height: 1.5;
+}
+
+.weapon-box h3 {
+  /* Weapon name style */
+  font-size: 1.4rem;
+  margin-bottom: 12px;
+  color: #ffe600;
+  font-weight: bold;
+  font-family: 'Orbitron', sans-serif;
+  text-shadow: 1px 1px #000;
+}
+
+.weapon-box p {
+  /* Weapon description text */
+  font-size: 1rem;
+  color: #ccc;
+  font-weight: bold;
+  line-height: 1.5;
+}
+
+/* Weapons section container layout */
+.weapon-boxes {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 25px;
+  margin-top: 40px;
+}
+
+.buy-btn {
+  /* Buy button styling */
+  margin-top: 16px;
+  padding: 12px 26px;
+  background: linear-gradient(to right, #ffe600, #fff000);
+  color: #000;
+  border: none;
+  border-radius: 8px;
+  font-weight: normal;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  box-shadow: 0 0 12px rgba(255, 230, 0, 0.4);
+}
+/* Hover effect for Buy button - changes background color and slightly scales up */
+.buy-btn:hover {
+  background: #fff600;
+  transform: scale(1.05);
+}
+
+/* Keyframe animation for fade-in upward motion */
+@keyframes fadeInUp {
+  from {
+    transform: translateY(60px);
+    opacity: 0;
+  }
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+/* Container for all character cards, aligned and spaced */
+.character-boxes {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 30px;
+}
+
+/* Character card font styling */
+.character-card {
+  font-family: 'Orbitron', sans-serif;
+}
+
+/* Basic card styling with 3D perspective */
+.character-card {
+  width: 260px;
+  height: 360px;
+  perspective: 1000px;
+  transition: transform 0.4s ease;
+}
+
+/* Slight scale-up on hover for character cards */
+.character-card:hover {
+  transform: scale(1.03);
+}
+
+/* Duplicate font-family declaration for title and card */
+.character-card h4,
+.character-card {
+  font-family: 'Orbitron', sans-serif;
+}
+
+/* Paragraph and button font styles */
+.character-card p, .flip-btn {
+  font-family: 'Arial', sans-serif;
+}
+
+/* Paragraph specific styling */
+.character-card p {
+  font-size: medium;
+  font-weight: bold;
+}
+
+/* Inner wrapper for 3D flip animation */
+.card-inner {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  transform-style: preserve-3d;
+  transition: transform 0.5s;
+}
+
+/* Flip card on Y-axis when 'flipped' class is applied */
+.character-card.flipped .card-inner {
+  transform: rotateY(180deg);
+}
+
+/* Common styling for both front and back of the card */
+.card-front, .card-back {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  backface-visibility: hidden;
+  border-radius: 12px;
+  box-shadow: 0 0 15px #000;
+  background-color: #1a1a1a;
+  padding: 20px;
+  text-align: center;
+  color: white;
+  transition: box-shadow 0.3s ease;
+}
+
+/* Hover glow effect for both sides of the card */
+.card-front:hover, .card-back:hover {
+  box-shadow: 0 0 20px #ffe600;
+}
+
+/* Image inside the card front */
+.card-front img {
+  width: 100%;
+  border-radius: 8px;
+  margin-bottom: 15px;
+}
+
+/* Title coloring for front and back */
+.card-front h3, .card-back h4 {
+  color: #ffe600;
+  font-size: 1.4rem;
+  margin-bottom: 10px;
+}
+
+/* Back side of card flipped and centered */
+.card-back {
+  transform: rotateY(180deg);
+  background-color: #111;
+  color: #ccc;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+/* Wrapper inside character box for managing layout */
+.character-box-inner {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  text-align: center;
+  transition: transform 0.6s;
+  transform-style: preserve-3d;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  padding: 20px;
+}
+
+/* Front and back structure of character box */
+.character-box-front,
+.character-box-back {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  backface-visibility: hidden;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between; /* Push button to the bottom */
+}
+
+/* Image styling on the character front */
+.character-box-front img {
+  width: 100%;
+  max-height: 180px;
+  object-fit: cover;
+  border-radius: 8px;
+  margin-bottom: 15px;
+}
+
+/* Flip button styling */
+.flip-btn {
+  align-self: center;       /* Center horizontally */
+  margin-top: auto;         /* Push to bottom inside flex box */
+  padding: 10px 16px;
+  background: #ffe600;
+  color: #000;
+  border: none;
+  border-radius: 6px;
+  font-weight: bold;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: background 0.3s ease;
+}
+
+/* Hover effect on flip button */
+.flip-btn:hover {
+  background: #fff000;
+  transform: scale(1.05);
+}
+
+/* Container for scrolling weapons horizontally */
+.weapon-container {
+  display: flex;
+  flex-wrap: nowrap;
+  overflow-x: auto;
+  gap: 20px;
+  padding: 20px 0;
+  animation: containerRotate360 10s linear infinite;
+  transform-style: preserve-3d;
+  perspective: 1000px;
+}
+
+/* Styling for each weapon card */
+.weapon-box {
+  min-width: 250px;
+  flex: 0 0 auto;
+  background-color: #111;
+  border: 1px solid #444;
+  padding: 16px;
+  border-radius: 8px;
+  text-align: center;
+  color: white;
+  transform-style: preserve-3d;
+  perspective: 1000px;
+  transition: transform 1s ease, box-shadow 0.5s;
+}
+
+/* Active filter button style */
+.weapon-filter button.active {
+  background-color: #f04d4d;
+  color: white;
+}
+
+/* Filter button layout */
+.weapon-filter {
+  display: flex;
+  justify-content: center;
+  gap: 15px;
+  margin: 30px auto;
+  flex-wrap: wrap;
+}
+
+/* Styling for filter buttons */
+.weapon-filter button {
+  background-color: #111;
+  color: #ffe600;
+  border: 2px solid #ffe600;
+  padding: 10px 20px;
+  font-size: 1rem;
+  font-weight: bold;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+/* Hover effect for filter buttons */
+.weapon-filter button:hover {
+  background-color: #ffe600;
+  color: #111;
+  transform: scale(1.05);
+  box-shadow: 0 0 10px #ffe60088;
+}
+
+/* Re-define active state with brighter background */
+.weapon-filter button.active {
+  background-color: #ffcc00;
+  color: #000;
+  font-weight: bold;
+}
+
+/* Card inner flip transition for character cards */
+.character-card .card-inner {
+  transition: transform 0.8s;
+  transform-style: preserve-3d;
+  position: relative;
+}
+
+/* Flip card Y-axis again (duplicate but valid for logic grouping) */
+.character-card.flipped .card-inner {
+  transform: rotateY(180deg);
+}
+
+/* Resetting card sides again (duplicate block for scoped styling) */
+.card-front, .card-back {
+  backface-visibility: hidden;
+  position: absolute;
+  width: 100%;
+  height: 100%;
+}
+
+/* Back face rotation again (duplicate but functional) */
+.card-back {
+  transform: rotateY(180deg);
+}
+
+/* Scroll wrapper for weapons section */
+.weapon-scroll-wrapper {
+  position: relative;
+  display: flex;
+  align-items: center;
+  width: 100%;
+  overflow: hidden;
+  padding: 20px 0;
+}
+
+/* Duplicate wrapper - might be overwriting earlier one */
+.weapon-scroll-wrapper {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+  padding: 30px 0;
+}
+
+/* Container for scrolling weapons */
+.scroll-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  margin: 40px auto;
+  max-width: 90%;
+  position: relative;
+}
+
+/* Actual weapon list scrollable area */
+.weapon-container {
+  display: flex;
+  overflow-x: auto;
+  scroll-behavior: smooth;
+  gap: 20px;
+  padding: 10px;
+  background: #111;
+  border-radius: 10px;
+  max-width: 70vw;
+  scrollbar-width: none; /* Hides scrollbar in Firefox */
+}
+/* Hides the scrollbar in WebKit browsers (Chrome, Safari) for a cleaner horizontal scroll */
+.weapon-container::-webkit-scrollbar {
+  display: none;
+}
+
+/* Animation for fading in elements with upward motion */
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(40px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+/* Applies fadeIn animation to weapon-box and character-box elements */
+.weapon-box, .character-box {
+  animation: fadeIn 0.6s ease forwards;
+}
+
+/* Styles for individual weapon cards */
+.weapon-card {
+  flex: 0 0 auto; /* Prevents shrinking and sets fixed width */
+  width: 150px;
+  height: 200px;
+  background: #222;
+  color: #fff;
+  border-radius: 10px;
+  text-align: center;
+  line-height: 200px; /* Vertically centers text */
+  font-weight: bold;
+  font-family: Orbitron, sans-serif;
+  transition: transform 0.3s; /* Smooth hover effect */
+}
+
+/* Enlarge weapon card on hover for interactivity */
+.weapon-card:hover {
+  transform: scale(1.05);
+}
+
+/* Wrapper for scroll left/right buttons above the scrollable section */
+.scroll-btn-group {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  margin-bottom: 10px;
+  z-index: 2;
+  top: -40px; /* Pulls buttons upwards visually */
+}
+
+/* Styling for scroll buttons */
+.scroll-btn {
+  background-color: #1a1a1a;
+  color: white;
+  border: none;
+  padding: 10px 15px;
+  margin: 0 5px;
+  font-size: 20px;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+/* Darkens button background slightly on hover */
+.scroll-btn:hover {
+  background-color: #444;
+}
+
+/* Spacing utility classes for left/right scroll buttons */
+.left-btn {
+  margin-right: 10px;
+}
+
+.right-btn {
+  margin-left: 10px;
+}
+
+/* Styles for the Game Features section container */
+.game-features {
+  padding: 60px 20px;
+  background-color: #0a0a0a;
+  text-align: center;
+  font-family: 'Orbitron', sans-serif;
+}
+
+/* Individual feature item box */
+.feature-item {
+  background-color: #111;
+  border: 2px solid #333;
+  border-radius: 10px;
+  overflow: hidden;
+  transition: all 0.4s ease;
+  transform: scale(1);
+  margin-bottom: 60px;
+}
+
+/* Hover effect on feature items: enlarges, elevates and highlights with glow */
+.feature-item:hover {
+  transform: scale(1.12) translateY(-10px);
+  box-shadow: 0 0 45px rgb(201, 182, 9), 0 0 25px rgba(219, 197, 3, 0.9);
+  border-color: #f2ff00;
+  transition: all 0.4s ease-in-out;
+}
+
+/* Heading styles inside Game Features section */
+.game-features h2 {
+  font-size: 2.8rem;
+  color: #fff;
+  margin-bottom: 30px;
+  border-bottom: 3px solid #ffe600;
+  display: inline-block;
+  padding-bottom: 10px;
+  letter-spacing: 2px;
+}
+
+/* Flex container for laying out multiple feature cards */
+.feature-grid {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 30px;
+}
+
+/* Repeated feature-item style block - keep only one in final version */
+/* This block includes animation and more visual styling */
+.feature-item {
+  background-color: #111;
+  width: 340px;
+  border: 1px solid #333;
+  box-shadow: 0 0 20px rgba(255, 230, 0, 0.2);
+  transition: transform 0.5s ease, box-shadow 0.5s;
+  animation: fadeUp 1s ease forwards; /* Triggering fadeUp animation */
+  opacity: 0; /* Starts invisible for animation */
+}
+
+/* Slight scale and glow on hover for engagement */
+.feature-item:hover {
+  transform: scale(1.07);
+  box-shadow: 0 0 25px rgba(255, 230, 0, 0.4);
+}
+
+/* Image inside feature card takes full width */
+.feature-item img {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+/* Caption text styling for image descriptions or feature titles */
+.caption {
+  background-color: #111;
+  color: #ffe600;
+  padding: 15px;
+  font-size: 1.1rem;
+  font-weight: bold;
+  text-transform: uppercase;
+}
+
+/* Custom keyframe animation for smooth upward fade-in */
+@keyframes fadeUp {
+  0% {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Footer styling: minimal, clean, centered text */
+.main-footer {
+  background-color: #000;
+  padding: 20px;
+  text-align: center;
+  color: #777;
+  font-size: 0.9rem;
+}
+
+
+
+/* ================= GAMES Section CSS ============= */
+/* Animation Keyframes: Fades in and slides content up */
+@keyframes fadeSlideUp {
+  0% {
+    opacity: 0;
+    transform: translateY(30px); /* Starts lower and transparent */
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0); /* Ends in place and fully visible */
+  }
+}
+
+/* Hero section animation: fades up when page loads */
+.cod-games-hero {
+  animation: fadeSlideUp 1.2s ease-out forwards;
+  opacity: 0; /* Initially hidden until animation runs */
+}
+
+/* Hero section styling */
+.cod-games-hero {
+  text-align: center; /* Centers all child elements */
+  padding: 8rem 1rem 3rem; /* Adds large space at top for dramatic intro */
+  margin-top: 4rem; /* Pushes below navbar/header */
+  background: url('https://c4.wallpaperflare.com/wallpaper/104/701/206/1920x1080-px-call-of-duty-call-of-duty-black-ops-iii-video-games-abstract-fantasy-hd-art-wallpaper-preview.jpg') center/cover no-repeat;
+  color: #fff;
+  position: relative; /* Needed for layering with ::before pseudo-element */
+}
+
+/* Hero heading styles */
+.cod-games-hero h1 {
+  font-family: 'Anton', sans-serif; /* Bold, impactful font */
+  font-size: 70px; /* Large title size */
+  color: #f5c400; /* Gold-yellow highlight */
+}
+
+/* Hero paragraph styling */
+.cod-games-hero p {
+  max-width: 800px; /* Limits width for better readability */
+  margin: 0 auto; /* Centered block */
+  font-size: 1.2rem;
+  line-height: 1.6; /* Improves readability */
+  font-weight: normal;
+  color: #ddd; /* Light gray for contrast */
+}
+
+/* Dark blur overlay using pseudo-element for background dimming */
+.cod-blur::before {
+  content: "";
+  position: absolute;
+  top: 0; left: 0;
+  width: 100%; height: 100%;
+  background-color: rgba(0, 0, 0, 0.6); /* Semi-transparent black */
+  backdrop-filter: blur(2px); /* Subtle blur effect */
+  z-index: 1; /* Behind main content */
+}
+
+/* Ensures hero section content appears above the blur layer */
+.cod-games-hero * {
+  position: relative;
+  z-index: 2;
+}
+
+/* Adds typing-style animation preparation: overflow hidden and right border */
+.cod-game-title {
+  overflow: hidden; /* Required for typewriter animation effect */
+  border-right: 2px solid #fff; /* Mimics typing cursor */
+  white-space: nowrap; /* Prevents text wrapping */
+}
+
+/* Adds delay to main title for staggered animation */
+.cod-games-title {
+  animation: fadeSlideUp 1.2s ease-out forwards;
+  animation-delay: 0.3s; /* Delays start for layered entrance */
+  opacity: 0; /* Starts invisible for animation */
+}
+
+/* Optional typing animation: grows width from 0 to full */
+@keyframes typing {
+  from { width: 0 }
+  to { width: 100% }
+}
+
+/* Optional cursor blinking effect for typewriter animation */
+@keyframes blink {
+  from, to { border-color: transparent }
+  50% { border-color: white; }
+}
+
+/* Styling for tagline below title */
+.cod-games-tagline {
+  font-size: 1.1rem;
+  color: #bbb; /* Soft gray */
+  font-weight: bold;
+}
+
+/* Applies fadeSlideUp to tagline with longer delay */
+.cod-games-tagline {
+  animation: fadeSlideUp 1.2s ease-out forwards;
+  animation-delay: 0.6s;
+  opacity: 0;
+}
+
+/* Layout for the grid of Call of Duty game cards */
+.cod-game-catalog {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); /* Responsive column count based on container */
+  gap: 1.5rem; /* Space between grid items */
+  padding: 5rem 2rem; /* Large padding around catalog */
+  background-color: #111; /* Dark background for contrast */
+  margin-top: 100px; /* Extra space below hero section */
+}
+
+/* Duplicate rule - same as above (only one needed in final CSS) */
+.cod-game-catalog {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 1.5rem;
+  padding: 5rem 2rem;
+  background-color: #111;
+  margin-top: 100px;
+}
+
+/* Individual game card styling */
+.cod-game-card {
+  background-color: #1b1b1b; /* Slightly lighter than background */
+  border: 2px solid #ffc107; /* Gold-yellow border */
+  border-radius: 10px;
+  overflow: hidden;
+  box-shadow: 0 4px 12px rgba(255, 193, 7, 0.2); /* Soft golden glow */
+  transition: transform 0.3s ease; /* Hover animation effect */
+  max-width: 320px; /* Keeps cards within a tidy size */
+  margin: 0 auto; /* Centers cards horizontally in grid */
+  position: relative;
+  overflow: hidden; /* Hides overflow elements (like images) */
+  z-index: 1; /* For layered hover effects if needed */
+}
+/* Glowing animated border effect using a blurred pseudo-element */
+.cod-game-card::before {
+  content: "";
+  position: absolute;
+  top: -2px;
+  left: -2px;
+  right: -2px;
+  bottom: -2px;
+  background: linear-gradient(45deg,#ffe600,#f9cc02,#d5cb08,#f1c40f,#f1c500); /* Yellow gradient glow */
+  background-size: 400%; /* Large size for movement animation */
+  z-index: -1; /* Behind the actual card */
+  filter: blur(5px); /* Soft glow look */
+  opacity: 0; /* Initially hidden */
+  transition: opacity 0.3s ease; /* Smooth fade-in on hover */
+}
+
+/* When hovering, glow appears and animates */
+.cod-game-card:hover::before {
+  opacity: 1; /* Show glow */
+  animation: neonBorder 2s linear infinite; /* Animate background movement */
+}
+
+/* Moves the background gradient to create animated glow effect */
+@keyframes neonBorder {
+  0% {
+    background-position: 0% 50%;
+  }
+  100% {
+    background-position: 400% 50%;
+  }
+}
+
+/* Float animation for cards: gives a soft up-down motion */
+@keyframes floatCard {
+  0% { transform: translateY(0); }
+  50% { transform: translateY(-5px); }
+  100% { transform: translateY(0); }
+}
+
+/* Applies floating animation to every game card */
+.cod-game-card {
+  animation: floatCard 3s ease-in-out infinite;
+}
+
+/* On hover: card lifts more and triggers another animation */
+.cod-game-card:hover {
+  transform: translateY(-8px); /* Moves card upward */
+  animation: explode 0.4s ease-in-out; /* Placeholder for custom pop effect (needs @keyframes explode) */
+  color: #000; /* Changes text color to black on hover */
+}
+
+/* Card image styling: fixed height, cover scaling */
+.cod-game-card img {
+  width: 100%;
+  height: 180px;
+  object-fit: cover; /* Ensures full coverage without distortion */
+}
+
+/* On hover, text inside the card changes to black for contrast */
+.cod-game-card:hover .cod-game-info h2,
+.cod-game-card:hover .cod-game-info p {
+  color: #000;
+}
+
+/* Game card info section: padding + text color */
+.cod-game-info {
+  padding: 1rem;
+  color: #fff;
+}
+
+/* Game title styling inside card */
+.cod-game-info h2 {
+  font-size: 1rem;
+  color: #d8c21bfd; /* Soft yellow */
+  margin-bottom: 0.5rem;
+  font-family: 'Orbitron',sans-serif; /* Futuristic game-style font */
+}
+
+/* Game description styling */
+.cod-game-info p {
+  font-size: 0.95rem;
+  margin-bottom: 1rem;
+}
+
+/* Container for tags like genre, type, etc. */
+.cod-game-tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+  margin-bottom: 1rem;
+}
+
+/* Individual tag styling */
+.cod-game-tags span {
+  background-color: #ffc107; /* Gold-yellow background */
+  color: #111;
+  padding: 0.3rem 0.6rem;
+  font-size: 0.85rem;
+  border-radius: 5px;
+  font-weight: 600;
+}
+
+/* Main action button (e.g., buy, play) */
+.cod-btn-action {
+  display: inline-block;
+  background-color: #ffc107; /* Vibrant yellow */
+  color: #111 !important; /* Ensures black text */
+  font-weight: bold;
+  font-size: small;
+  padding: 0.6rem 1rem;
+  border-radius: 5px;
+  cursor: pointer;
+  text-decoration: none !important;
+  border: 1.4px solid #000; /* Adds dark border */
+  transition: background 0.3s ease; /* Smooth hover */
+}
+
+/* Hover effect for action button */
+.cod-btn-action:hover {
+  background-color: #e0a800; /* Slightly darker yellow */
+  color: #000;
+  border-color: #fff; /* Border turns white */
+  box-shadow: 0 0 10px #ffc107; /* Glowing effect */
+}
+
+/* Green button for free games */
+.cod-free {
+  background-color: #28a745; /* Bootstrap green */
+  color: #fff;
+}
+
+/* Common border styles for action and free buttons */
+.cod-btn-action,
+.cod-free {
+  border: 1.4px solid #000;
+}
+
+/* On hover, border becomes white for better visibility */
+.cod-btn-action:hover,
+.cod-free:hover {
+  border-color: #fff;
+}
+
+/* Hover effect for free button */
+.cod-free:hover {
+  background-color: #218838; /* Slightly darker green */
+}
+
+/* Pre-order button: visually disabled and gray */
+.cod-btn-preorder {
+  background-color: #444;
+  border: none;
+  color: #aaa;
+  padding: 0.6rem 1rem;
+  border-radius: 5px;
+  cursor: not-allowed; /* Indicates it's disabled */
+  font-weight: bold;
+}
+
+/* Ensures all link states (visited, hover, etc.) inside .card stay white and unstyled */
+.card a,
+.card a:visited,
+.card a:hover,
+.card a:active {
+  color: white !important;
+  text-decoration: none !important;
+}
+
+/* Animated letter entrance for title/tagline with delay per character */
+.cod-games-title span,
+.cod-games-tagline span {
+  display: inline-block;
+  opacity: 0;
+  transform: translateY(20px);
+  animation: riseLetters 0.6s forwards;
+  animation-delay: calc(0.03s * var(--i)); /* Delays based on character index */
+}
+
+/* Keyframes for character rise effect */
+@keyframes riseLetters {
+  to {
+    opacity: 1;
+    transform: translateY(0); /* Moves each letter upward into view */
+  }
+}
+
+
+
+
+/* ===== Player Reviews Section CSS ===== */
+/* Custom CSS variables for colors to maintain consistency across the theme */
+:root {
+  --rev-bg-dark: #000; /* Dark background color */
+  --rev-bg-light: #ffffff; /* Light background color */
+  --rev-yellow: #ffd700; /* Yellow color for accents */
+  --rev-white: #f0f0f0; /* Light white color */
+  --rev-black: #0d0d0d; /* Very dark background color */
+}
+
+/* Reviews section style */
+.reviews-section {
+  padding: 80px 50px 80px 30px; 
+  background-color: var(--rev-bg-dark); /* Dark background color */
+  color: var(--rev-yellow); /* Yellow text color */
+  transition: background-color 0.6s ease, color 0.6s ease; /* Smooth transition for background and text color change */
+  margin-top: 100px; /* Pushes the section down from the navigation */
+}
+
+/* Style when the page is scrolled, changing background and text color */
+.reviews-section.scrolled {
+  background-color: var(--rev-bg-light); /* Light background */
+  color: var(--rev-black); /* Black text color */
+}
+
+/* Title style for the reviews section */
+.section-title {
+  font-family: 'Anton', sans-serif; 
+  text-align: center; /* Center-aligned */
+  font-size: 2.5rem;
+  color: var(--rev-yellow); /* Yellow color */
+  margin-bottom: 40px; /* Space below the title */
+}
+
+/* Flexbox layout for the review blocks */
+.review-block {
+  display: flex; 
+  flex-direction: row; /* Arrange items in a row */
+  justify-content: center; /* Center the content horizontally */
+  align-items: stretch; /* Stretch items to equal height */
+  flex-wrap: wrap;
+  gap: 40px; /* Increased gap between items */
+  margin-bottom: 40px; /* Space below each review block */
+}
+
+/* Animation for sliding in the title from the left */
+.section-title {
+  font-size: 3.2rem; /* Increased font size */
+  text-align: center;
+  color: var(--rev-yellow);
+  font-family: 'Anton', sans-serif;
+  opacity: 0; 
+  transform: translateX(-100px); /* Start off-screen to the left */
+  animation: slideInLeftFade 1s ease-out forwards; /* Animate the title to slide in */
+}
+
+/* Keyframes for the sliding title animation */
+@keyframes slideInLeftFade {
+  to {
+    opacity: 1; /* Make it fully visible */
+    transform: translateX(0); /* Move it to its original position */
+  }
+}
+
+/* Image styling for the review images */
+.review-img {
+  width: 300px; 
+  height: 300px; 
+  overflow: hidden; /* Hide any overflow from the image */
+  border-radius: 12px; /* Rounded corners */
+  flex-shrink: 0; /* Prevent shrinking */
+  transition: transform 0.5s ease; /* Smooth transition when transforming */
+  transform-style: preserve-3d; /* Preserve 3D space for transformations */
+}
+
+/* Style for images inside the review images box */
+.review-img img {
+  width: 100%; 
+  height: 100%; /* Make image fill the container */
+  object-fit: cover; /* Cover the container without distortion */
+}
+
+/* Review box styling (text and background container) */
+.review-box {
+  background-color: #1c1c1c; /* Dark background for the box */
+  padding: 25px; /* Padding inside the box */
+  border-radius: 12px; /* Rounded corners for the box */
+  display: flex; 
+  flex-direction: column; 
+  justify-content: space-between; 
+  transition: background-color 0.6s ease, color 0.6s ease; /* Smooth transition on background color change */
+  width: 400px; /* Set width for the review box */
+  margin-right: 20px; /* Space between boxes */
+}
+
+/* When section is scrolled, light background and black text for the review box */
+.reviews-section.scrolled .review-box {
+  background-color: #fff; /* White background */
+  color: #000; /* Black text */
+}
+
+/* Color change for paragraph text inside review box when section is scrolled */
+.reviews-section.scrolled .review-box p {
+  color: #000; /* Change text color to black */
+}
+
+/* Title inside the review box */
+.review-box h3 {
+  font-size: 1.6rem; 
+  margin: 0 0 10px; /* Margin below the title */
+  color: #f1c40f; /* Gold-yellow text color */
+  font-family: 'Orbitron', sans-serif;
+}
+
+/* Paragraph text inside the review box */
+.review-box p {
+  font-family: Arial, Helvetica, sans-serif; /* Simple sans-serif font */
+  font-size: 1.2rem; /* Regular font size */
+  line-height: 1.5; /* Increased line height for readability */
+  margin: 10px 0; 
+  font-weight: normal; 
+  color: white; /* White text color */
+}
+
+/* Styling for the star rating icons */
+.stars {
+  font-size: 2rem; /* Larger font size for stars */
+  color: var(--rev-yellow); /* Yellow color for stars */
+}
+
+/* Responsive design for smaller screens */
+@media (max-width: 768px) {
+  .review-block {
+    flex-direction: column; /* Stack review blocks vertically */
+    align-items: center; /* Center-align the items */
+  }
+
+  .review-img,
+  .review-box {
+    width: 90%; /* Make the images and review boxes 90% of the width */
+    height: auto; /* Auto-adjust the height */
+  }
+}
+
+
+/* ===== CONTACT Section CSS ===== */
+/* === CONTACT HERO SECTION === */
+.contact-hero {
+  /* Sets a background image with center alignment, covering the entire area */
+  background: url('https://bnetcmsus-a.akamaihd.net/cms/blog_header/xy/XY58EAGLVIYT1698876900629.jpg') center/cover no-repeat;
+  height: 60vh; /* Takes up 60% of the viewport height */
+  display: flex;
+  align-items: center; /* Vertically centers the overlay */
+  justify-content: center; /* Horizontally centers the overlay */
+  position: relative;
+  margin-top: 100px; /* Creates space below the nav */
+  filter: brightness(0.85); 
+  animation: fadeInHero 2s ease-in-out; /* Smooth fade-in on load */
+}
+
+.contact-hero .overlay {
+  /* Adds a semi-transparent black overlay to improve text readability */
+  background-color: rgba(0, 0, 0, 0.55);
+  padding: 3rem 2rem;
+  text-align: center;
+  color: #ffd700; /* Golden text color */
+  font-family: 'Orbitron', sans-serif;
+  border-radius: 10px;
+  box-shadow: 0 0 15px #ffd900; /* Glowing effect around the overlay */
+  animation: float 3s ease-in-out infinite; /* Floating animation for dynamic visual */
+}
+
+.contact-hero h2 {
+  font-size: 3rem;
+  margin-bottom: 1rem;
+  text-shadow: 2px 2px 10px #000; /* Helps text pop on bright backgrounds */
+}
+
+.contact-hero p {
+  font-size: 1.3rem;
+  color: #eee; /* Light gray for contrast and readability */
+}
+
+/* === MAIN CONTACT CONTAINER === */
+.contact-container {
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap; /* Allows elements to wrap responsively */
+  gap: 2rem;
+  padding: 5rem 2rem 4rem;
+  background: #0e0e0e; /* Dark theme background */
+  color: #fff;
+  font-family: 'Orbitron', sans-serif;
+  animation: fadeInUp 1.5s ease-in-out; /* Enters from below with fade */
+}
+
+/* === CONTACT FORM BOX === */
+.contact-form {
+  flex: 1; /* Takes available space equally */
+  min-width: 320px; /* Ensures mobile compatibility */
+  background: #1a1a1a;
+  padding: 2rem;
+  border-radius: 10px;
+  box-shadow: 0 0 25px rgba(255, 215, 0, 0.15); /* Subtle golden glow */
+  animation: glow 3s infinite alternate; /* Glowing box animation */
+}
+
+.contact-form h3 {
+  font-size: 1.8rem;
+  margin-bottom: 1rem;
+  color: #ffd700; /* Highlighting the heading in golden color */
+}
+
+.contact-form label {
+  display: block;
+  margin: 1rem 0 0.3rem;
+  font-weight: bold;
+  font-size: 1.1rem; /* Emphasizes label readability */
+}
+
+.contact-form input::placeholder,
+.contact-form textarea::placeholder {
+  font-family: Arial, sans-serif;
+  font-size: medium; /* Makes placeholder text readable */
+}
+
+.contact-form input,
+.contact-form textarea {
+  width: 100%; /* Full width inside the form */
+  padding: 0.75rem;
+  background: #000; /* Deep black input background */
+  border: 2px solid #ffd700; /* Golden outline */
+  color: #fff;
+  font-family: 'Orbitron', sans-serif;
+  border-radius: 6px;
+  transition: 0.3s ease;
+  animation: pulseGlow 4s infinite ease-in-out; /* Glowing input border animation */
+}
+
+.contact-form input:focus,
+.contact-form textarea:focus {
+  border-color: #fff;
+  outline: none;
+  box-shadow: 0 0 10px #ffd700; /* Focus state glow */
+}
+
+.send-btn {
+  margin-top: 1.5rem;
+  padding: 0.75rem 1.5rem;
+  background: #ffd700; /* Bright CTA button */
+  color: #000;
+  font-weight: bold;
+  font-size: medium;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: 0.3s;
+  box-shadow: 0 0 8px #ffd700;
+}
+
+.send-btn:hover {
+  background: #fff; /* Inverts color on hover for emphasis */
+  color: #000;
+  transform: scale(1.05); /* Slight zoom for interaction feedback */
+}
+
+/* === CONTACT INFO SECTION === */
+.contact-info {
+  flex: 1;
+  min-width: 250px;
+  background: #111;
+  padding: 2rem;
+  border-radius: 10px;
+  color: #ccc; /* Lighter text for readability */
+  animation: fadeInRight 2s ease-in-out; /* Slide in from right */
+}
+
+.contact-info h3 {
+  color: #ffd700;
+  margin-top: 1.5rem;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem; /* Spacing between icon and text (if used) */
+}
+
+.contact-info p {
+  margin: 0.3rem 0 1rem;
+}
+
+/* === KEYFRAME ANIMATIONS === */
+@keyframes glow {
+  0% { box-shadow: 0 0 10px #ffd700; }
+  100% { box-shadow: 0 0 25px #ffd700; }
+}
+/* Repeated glowing effect for boxes */
+
+@keyframes fadeInUp {
+  from { opacity: 0; transform: translateY(20px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+/* Slide up with fade for smooth content reveal */
+
+@keyframes fadeInRight {
+  from { opacity: 0; transform: translateX(30px); }
+  to { opacity: 1; transform: translateX(0); }
+}
+/* Slide in from right side animation */
+
+@keyframes float {
+  0% { transform: translateY(0px); }
+  50% { transform: translateY(-5px); }
+  100% { transform: translateY(0px); }
+}
+/* Soft floating motion for hero overlay */
+
+@keyframes fadeInHero {
+  from { opacity: 0; transform: translateY(-20px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+/* Hero section appears smoothly from top */
+
+@keyframes rotateIn {
+  from { transform: rotateY(90deg); opacity: 0; }
+  to { transform: rotateY(0); opacity: 1; }
+}
+/* Could be used for flipping effects (not applied here) */
+
+@keyframes pulseGlow {
+  0% { box-shadow: 0 0 10px #ffd700; }
+  50% { box-shadow: 0 0 25px #8d8d8d; }
+  100% { box-shadow: 0 0 10px #ffd700; }
+}
+/* Input border animation that pulses between gold and gray */
+
+
+/* Custom gun cursor for the whole website */
+body {
+  cursor: url('images/oth338.cur'), auto;
+}
